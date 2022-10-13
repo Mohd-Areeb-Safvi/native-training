@@ -18,6 +18,7 @@ import Calculator from "./pages/Calculator";
 import TabBar from "./pages/TabBar";
 import "react-native-gesture-handler";
 import FourthScreen from "./pages/FourthScreen";
+import ExpoDocuments from "./pages/ExpoDocuments";
 import IssuesScreen from "./pages/IssuesScreen";
 import {
   createDrawerNavigator,
@@ -206,21 +207,18 @@ const BottomTabNavigator = () => {
       // activeColor="black"
     >
       <MaterialBottomTab.Screen
-        name="Calculators"
-        component={Calculator}
+        name="ExpoDocuments"
+        component={ExpoDocuments}
         labeled={true}
         options={{
           tabBarLabel: ({ focused }) => {
-            console.log("focused", focused);
             return (
               <View>
-                <Text style={{ color: focused ? "red" : "#000" }}>Home1s</Text>
+                <Text style={{ color: focused ? "red" : "#000" }}>Expo</Text>
               </View>
             );
           },
-          tabBarBadge: () => {
-            return <Text>1</Text>;
-          },
+
           tabBarIcon: ({ focused }) => (
             <Ionicons name="home" color={focused ? "red" : "black"} size={20} />
           ),
@@ -231,8 +229,6 @@ const BottomTabNavigator = () => {
         component={DisplayDetailsScreen}
         options={{
           tabBarLabel: ({ focused }) => {
-            console.log(focused, "focused");
-
             return (
               <View>
                 <Text style={{ color: focused ? "red" : "black" }}>
