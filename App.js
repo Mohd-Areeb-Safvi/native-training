@@ -18,6 +18,7 @@ import Calculator from "./pages/Calculator";
 import TabBar from "./pages/TabBar";
 import "react-native-gesture-handler";
 import FourthScreen from "./pages/FourthScreen";
+import Animation from "./pages/Animation";
 import ExpoDocuments from "./pages/ExpoDocuments";
 import IssuesScreen from "./pages/IssuesScreen";
 import {
@@ -207,8 +208,8 @@ const BottomTabNavigator = () => {
       // activeColor="black"
     >
       <MaterialBottomTab.Screen
-        name="ExpoDocuments"
-        component={ExpoDocuments}
+        name="Animation"
+        component={Animation}
         labeled={true}
         options={{
           tabBarLabel: ({ focused }) => {
